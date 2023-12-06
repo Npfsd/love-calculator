@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Love+Ya+Like+A+Sister&family=Roboto+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <title>Love calculator</title>
+    <style>
+    body{
+     
+        background-image: url(lovebg.jpg);
+        object-fit: cover;
+        background-size: cover;
+      background-repeat: no-repeat;
+        
+    }
+form{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+
+    
+}
+.navbar{
+    font-family: 'Libre Baskerville', serif;
+font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Roboto Mono', monospace;
+
+
+}
+.navbar-brand{
+    color: rgb(223, 65, 65);
+    font-size: 1.5em;
+}
+.lovecal{
+   
+    background-color:rgba(104, 100, 100, 0.5);
+    border-radius: 20px;
+    box-shadow: 10px red;
+   overflow: hidden;
+  
+ 
+}
+
+.form-label{
+  color: rgba(241, 237, 237);
+
+}
+.form-check-label{
+    color: white;
+}
+.title{
+    font-family: 'Libre Baskerville', serif;
+font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Roboto Mono', monospace;
+    color: red;
+    font-size:2em;
+    text-align: center;
+}
+#results{
+  color: white;
+  font-size: 1.5em;
+  background-color: black;
+}
+@media  (max-width:576px) {
+    body{
+        background-image: url(mob\ img.jpg);
+        background-size: cover;
+    }
+    .navbar-brand{
+        font-size: 20px;
+        
+    }
+    .lovecal{
+        margin-top: 400px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section>
+    <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./love icon.gif" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+           Love calculator
+          </a>
+        </div>
+      </nav>
+      <div class="container col-lg-5 by-0">
+      <div class="title by-0 mb-0 mt-5 mt-5">Love Calculator
+
+      </div>
+    </div>
+   
+    <form >
+        <div class="container lovecal col-xxl-3 col-xl-3 col-lg-5 col-md-5 col-sm-6 m-3 col-8 mb-5">
+  <div class="mb-3 col-xxl-10 col-xl-10 col-lg-11 m-3">
+    <label for="exampleInputEmail1" class="form-label">Your Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required  >
+  </div>
+  <div class="mb-3 col-xxl-10 col-xl-10 col-lg-11 m-3">
+    <label for="exampleInputPassword1" class="form-label">Crush Name</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" required >
+  </div>
+  <div class="mb-3 form-check m-3">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1" aria-required="false" role="checkbox">True Love</label>
+  </div>
+  <button type="submit" class="btn btn-danger ms-4 m-3"  onclick="loveCalculator()" ><img src="arrow-through-heart-fill (1).svg" alt="arrow-through-heart-fill"  > Calculate Future</button>
+
+</form>  
+</div>
+<div id="results"></div>
+</section>
+<script>
+function loveCalculator(){
+  var lovePerchantage=Math.floor(Math.random()*100)+1
+  if(100==lovePerchantage){
+ let loveCal=document.getElementById("button")
+ loveCal.innerHTML=alert("Your Love Score is: "+lovePerchantage +"% "+" Surya-Jothiga Best couple")
+  }
+  if(99>lovePerchantage && lovePerchantage>80){
+ let loveCal=document.getElementById("button")
+ loveCal.innerHTML=alert("Your Love Score is "+lovePerchantage +"%"+" Few Days Marriage")
+  }
+  if(80>lovePerchantage && lovePerchantage>50){
+ let loveCal=document.getElementById("button")
+ loveCal.innerHTML=alert("Your Love Score is "+lovePerchantage +"%"+" (Sitha-Raman)")
+  }
+  if(50>lovePerchantage && lovePerchantage>30){
+ let loveCal=document.getElementById("button")
+ loveCal.innerHTML=alert("Your Love Score is "+lovePerchantage +"%"+" Love Today(pretheep) ")
+  }
+else{
+ let loveCal=document.getElementById("button")
+ loveCal.innerHTML=alert("Your Love Score is "+lovePerchantage +"%"+" (Better Luck Next Time)")
+  }
+  
+  
+
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
